@@ -5,6 +5,17 @@
   text-align: center;
 }
 
+.classrow{
+  display: flex;
+  margin: 100px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  /* align-content: center; */
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

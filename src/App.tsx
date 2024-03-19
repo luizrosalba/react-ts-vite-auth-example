@@ -16,27 +16,35 @@ const MainContent = () => {
       .catch((error) => console.log(error));
   };
   return (
-    <>
+    <div>
       <h1>Example Authentication</h1>
-      <GoogleLogin
-        onSuccess={credentialResponse => {
-          console.log(credentialResponse);
-        }}
-        onError={() => {
-          console.log('Login Failed');
-        }}
-      />
-      <AuthenticatedTemplate>
-        {activeAccount ? (
-          <IdTokenData idTokenClaims={activeAccount.idTokenClaims} />
-        ) : null}
-      </AuthenticatedTemplate>
-      <UnauthenticatedTemplate>
-        <button className="signInButton" onClick={handleRedirect} >
-          Sign up
-        </button>
-      </UnauthenticatedTemplate>
-    </>
+      <div className='classrow'>
+        <h2>Google</h2>
+        <GoogleLogin
+          onSuccess={credentialResponse => {
+            console.log(credentialResponse);
+          }}
+          onError={() => {
+            console.log('Login Failed');
+          }}
+        />
+
+      </div>
+      <div className='classrow'>
+        <h2>Azure ID </h2>
+        <AuthenticatedTemplate>
+          {activeAccount ? (
+            <IdTokenData idTokenClaims={activeAccount.idTokenClaims} />
+          ) : null}
+        </AuthenticatedTemplate>
+        <UnauthenticatedTemplate>
+          <button className="signInButton" onClick={handleRedirect} >
+            Sign up
+          </button>
+        </UnauthenticatedTemplate>
+
+      </div>
+    </div>
   )
 }
 
