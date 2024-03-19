@@ -5,7 +5,6 @@ function App() {
     <>
       <h1>Example Authentication</h1>
       <div>Google Test</div>
-      <></>
 
     </>
   )
