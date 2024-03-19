@@ -4,7 +4,8 @@ function App() {
   return (
     <>
       <h1>Example Authentication</h1>
-      <div>Google</div>
+      <div>Google Test</div>
+      <></>
 
     </>
   )
