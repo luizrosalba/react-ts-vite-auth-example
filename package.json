@@ -13,6 +13,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@azure/msal-browser": "^3.10.0",
+    "@azure/msal-react": "^2.0.12",
     "@react-oauth/google": "^0.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
